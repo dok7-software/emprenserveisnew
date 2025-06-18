@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Users, Sparkles } from "lucide-react";
 import { useEffect } from "react";
@@ -96,6 +95,95 @@ const Hero = () => {
             <div className="flex items-center gap-2 group cursor-default">
               <Users className="h-5 w-5 text-empren-purple group-hover:scale-110 transition-transform duration-300" />
               <span className="font-poppins group-hover:text-empren-text transition-colors duration-300">Inicio: 9 septiembre</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Sponsor Logos in Banner */}
+      <div className="mt-16 pt-8 border-t border-empren-purple/20">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          {/* Financiado por */}
+          <div className="animate-on-scroll">
+            <h3 className="font-clash font-semibold text-xs text-empren-text/60 mb-4 uppercase tracking-wide text-center md:text-left">
+              FINANCIADO POR:
+            </h3>
+            <div className="flex items-center justify-center md:justify-start gap-6">
+              {/* EU Logo */}
+              <div className="flex items-center gap-3 group/sponsor">
+                <div className="w-16 h-12 bg-blue-900 rounded flex items-center justify-center group-hover/sponsor:scale-105 transition-transform duration-300 shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=100&h=60&fit=crop" 
+                    alt="Unión Europea Logo" 
+                    className="w-full h-full object-cover rounded opacity-70"
+                  />
+                </div>
+                <div>
+                  <p className="font-poppins text-xs text-empren-text/70 leading-tight">
+                    Cofinanciado por<br />
+                    <span className="font-medium text-empren-text">la Unión Europea</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Programa de */}
+          <div className="animate-on-scroll">
+            <h3 className="font-clash font-semibold text-xs text-empren-text/60 mb-4 uppercase tracking-wide text-center md:text-left">
+              PROGRAMA DE:
+            </h3>
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
+              {/* Generalitat Logo */}
+              <div className="flex items-center gap-2 group/sponsor">
+                <div className="w-12 h-8 bg-red-600 rounded flex items-center justify-center group-hover/sponsor:scale-105 transition-transform duration-300 shadow-md">
+                  <img 
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=80&h=50&fit=crop" 
+                    alt="Generalitat de Catalunya Logo" 
+                    className="w-full h-full object-cover rounded opacity-80"
+                  />
+                </div>
+                <div>
+                  <p className="font-poppins text-xs font-medium text-empren-text leading-tight">
+                    Generalitat<br />
+                    de Catalunya
+                  </p>
+                </div>
+              </div>
+
+              {/* University Logo */}
+              <div className="flex items-center gap-2 group/sponsor">
+                <div className="w-12 h-8 bg-purple-800 rounded flex items-center justify-center group-hover/sponsor:scale-105 transition-transform duration-300 shadow-md">
+                  <img 
+                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=80&h=50&fit=crop" 
+                    alt="EUHT Logo" 
+                    className="w-full h-full object-cover rounded opacity-80"
+                  />
+                </div>
+                <div>
+                  <p className="font-poppins text-xs text-empren-text/70 leading-tight">
+                    <span className="font-medium text-empren-text">ESCOLA UNIVERSITÀRIA</span><br />
+                    D'HOTELERIA I TURISME
+                  </p>
+                </div>
+              </div>
+
+              {/* FAGEM Logo */}
+              <div className="flex items-center gap-2 group/sponsor">
+                <div className="w-12 h-8 bg-gray-600 rounded flex items-center justify-center group-hover/sponsor:scale-105 transition-transform duration-300 shadow-md">
+                  <img 
+                    src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=80&h=50&fit=crop" 
+                    alt="FAGEM Logo" 
+                    className="w-full h-full object-cover rounded opacity-80"
+                  />
+                </div>
+                <div>
+                  <p className="font-poppins text-xs text-empren-text/70 leading-tight">
+                    <span className="font-medium text-empren-text">FEDERACIÓ D'ASSOCIACIONS</span><br />
+                    I GREMIS EMPRESARIALS
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
