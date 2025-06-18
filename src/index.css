@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -85,10 +84,13 @@
 
   body {
     @apply bg-background text-foreground font-poppins;
+    font-family: 'Poppins', Arial, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-clash;
+    font-family: 'ClashDisplay', 'Poppins', Arial, sans-serif;
+    font-weight: bold;
   }
 }
 
@@ -221,4 +223,20 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #7c3aed;
+}
+
+@font-face {
+  font-family: 'ClashDisplay';
+  src: url('/fonts/ClashDisplay-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

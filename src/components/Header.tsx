@@ -1,7 +1,11 @@
-
 import { Button } from "@/components/ui/button";
+import { useState, useContext } from "react";
+import { Switch } from "@/components/ui/switch";
+import { LangContext } from "@/pages/Index";
 
-const Header = () => {
+const Header = ({ onOpenInscripcion }: { onOpenInscripcion: () => void }) => {
+  const lang = useContext(LangContext);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -19,24 +23,41 @@ const Header = () => {
         
         <nav className="hidden md:flex space-x-6">
           <button onClick={() => scrollToSection('programa')} className="text-empren-text hover:text-empren-purple transition-colors">
-            Programa
+            {lang === 'cat' ? 'Programa' : 'Programa'}
           </button>
           <button onClick={() => scrollToSection('beneficios')} className="text-empren-text hover:text-empren-purple transition-colors">
-            Beneficios
+            {lang === 'cat' ? 'Beneficis' : 'Beneficios'}
           </button>
           <button onClick={() => scrollToSection('verticales')} className="text-empren-text hover:text-empren-purple transition-colors">
-            Verticales
+            {lang === 'cat' ? 'Verticals' : 'Verticales'}
           </button>
           <button onClick={() => scrollToSection('contacto')} className="text-empren-text hover:text-empren-purple transition-colors">
-            Contacto
+            {lang === 'cat' ? 'Contacte' : 'Contacto'}
           </button>
         </nav>
 
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
+            <span className={`font-bold text-xs ${lang === 'es' ? 'text-empren-purple' : 'text-gray-400'}`}>ES</span>
+            <Switch
+              checked={lang === 'cat'}
+              onCheckedChange={() => {
+                const newLang = lang === 'es' ? 'cat' : 'es';
+                localStorage.setItem('lang', newLang);
+                window.dispatchEvent(new Event('languageChange'));
+              }}
+              aria-label="Cambiar idioma"
+              className="data-[state=checked]:bg-empren-purple"
+            />
+            <span className={`font-bold text-xs ${lang === 'cat' ? 'text-empren-purple' : 'text-gray-400'}`}>CAT</span>
+          </div>
+        </div>
+
         <Button 
-          onClick={() => scrollToSection('inscripcion')}
+          onClick={onOpenInscripcion}
           className="bg-empren-purple hover:bg-empren-purple/90 text-white px-6 py-2"
         >
-          Inscríbete
+          {lang === 'cat' ? 'Inscriu-te' : 'Inscríbete'}
         </Button>
       </div>
     </header>

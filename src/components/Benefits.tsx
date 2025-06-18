@@ -1,37 +1,50 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Target, TrendingUp, Network, MapPin } from "lucide-react";
+import { useContext } from "react";
+import { LangContext } from "@/pages/Index";
 
 const Benefits = () => {
+  const lang = useContext(LangContext);
+
   const benefits = [
     {
       icon: Users,
-      title: "Mentoría experta",
-      description: "Acceso a mentores especializados en diversos sectores tecnológicos con experiencia probada en el ecosistema emprendedor.",
+      title: lang === 'cat' ? 'Mentoria experta' : 'Mentoría experta',
+      description: lang === 'cat'
+        ? 'Accés a mentors especialitzats en diversos sectors tecnològics amb experiència provada en l’ecosistema emprenedor.'
+        : 'Acceso a mentores especializados en diversos sectores tecnológicos con experiencia probada en el ecosistema emprendedor.',
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       icon: Target,
-      title: "Validación de negocio",
-      description: "Metodologías probadas para validar tu producto y modelo de negocio antes de salir al mercado.",
+      title: lang === 'cat' ? 'Validació de negoci' : 'Validación de negocio',
+      description: lang === 'cat'
+        ? 'Metodologies provades per validar el teu producte i model de negoci abans de sortir al mercat.'
+        : 'Metodologías probadas para validar tu producto y modelo de negocio antes de salir al mercado.',
       gradient: "from-green-500 to-emerald-500"
     },
     {
       icon: TrendingUp,
-      title: "Acceso a inversores",
-      description: "Conexión directa con inversores y sesiones de pitch para presentar tu proyecto ante potenciales financiadores.",
+      title: lang === 'cat' ? 'Accés a inversors' : 'Acceso a inversores',
+      description: lang === 'cat'
+        ? 'Connexió directa amb inversors i sessions de pitch per presentar el teu projecte davant de potencials financiadors.'
+        : 'Conexión directa con inversores y sesiones de pitch para presentar tu proyecto ante potenciales financiadores.',
       gradient: "from-purple-500 to-pink-500"
     },
     {
       icon: Network,
-      title: "Networking especializado",
-      description: "Red de contactos con otros emprendedores, corporaciones y actores clave del ecosistema catalán.",
+      title: lang === 'cat' ? 'Networking especialitzat' : 'Networking especializado',
+      description: lang === 'cat'
+        ? 'Xarxa de contactes amb altres emprenedors, corporacions i actors clau de l’ecosistema català.'
+        : 'Red de contactos con otros emprendedores, corporaciones y actores clave del ecosistema catalán.',
       gradient: "from-orange-500 to-red-500"
     },
     {
       icon: MapPin,
-      title: "Ecosistema tecnológico",
-      description: "Inmersión completa en el hub tecnológico más importante del sur de Europa, ubicado en Catalunya.",
+      title: lang === 'cat' ? 'Ecosistema tecnològic' : 'Ecosistema tecnológico',
+      description: lang === 'cat'
+        ? 'Immersió completa al hub tecnològic més important del sud d’Europa, ubicat a Catalunya.'
+        : 'Inmersión completa en el hub tecnológico más importante del sur de Europa, ubicado en Catalunya.',
       gradient: "from-indigo-500 to-purple-500"
     }
   ];
@@ -40,14 +53,18 @@ const Benefits = () => {
     <section id="beneficios" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="font-clash font-bold text-4xl md:text-5xl text-empren-text mb-6 hover:text-empren-purple transition-colors duration-500">
-            ¿Por qué elegir <span className="text-empren-purple relative">
+          <h2 className="font-clash font-bold text-4xl md:text-5xl text-empren-text mb-6 hover:text-empren-purple transition-colors duration-500" style={{ fontFamily: 'ClashDisplay, Poppins, Arial, sans-serif', fontWeight: 'bold' }}>
+            {lang === 'cat'
+              ? 'Per què triar'
+              : '¿Por qué elegir'} <span className="text-empren-purple relative">
               EMPRÈN SERVEIS
               <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-empren-purple to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-            </span>?
+            </span>{lang === 'cat' ? '' : '?'}
           </h2>
           <p className="font-poppins text-xl text-empren-text/70 max-w-3xl mx-auto">
-            Un programa integral diseñado para acelerar el crecimiento de tu startup con el respaldo institucional más sólido
+            {lang === 'cat'
+              ? 'Un programa integral dissenyat per accelerar el creixement de la teva startup amb el suport institucional més sòlid'
+              : 'Un programa integral diseñado para acelerar el crecimiento de tu startup con el respaldo institucional más sólido'}
           </p>
         </div>
 

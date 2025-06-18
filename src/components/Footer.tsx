@@ -1,5 +1,8 @@
+import { useContext } from "react";
+import { LangContext } from "@/pages/Index";
 
 const Footer = () => {
+  const lang = useContext(LangContext);
   return (
     <footer className="bg-empren-text text-white py-12">
       <div className="container mx-auto px-4">
@@ -12,33 +15,35 @@ const Footer = () => {
               <span className="font-clash font-bold text-xl">EMPRÈN SERVEIS</span>
             </div>
             <p className="font-poppins text-white/70 text-sm leading-relaxed">
-              Programa de preaceleración impulsado por la Generalitat de Catalunya y la Unión Europea para startups tecnológicas.
+              {lang === 'cat'
+                ? 'Programa de preacceleració impulsat per la Generalitat de Catalunya i la Unió Europea per a startups tecnològiques.'
+                : 'Programa de preaceleración impulsado por la Generalitat de Catalunya y la Unión Europea para startups tecnológicas.'}
             </p>
           </div>
 
           <div>
-            <h4 className="font-clash font-semibold text-lg mb-4">Colaboradores</h4>
+            <h4 className="font-clash font-semibold text-lg mb-4">{lang === 'cat' ? 'Col·laboradors' : 'Colaboradores'}</h4>
             <ul className="font-poppins text-white/70 text-sm space-y-2">
               <li>Generalitat de Catalunya</li>
-              <li>Unión Europea</li>
-              <li>Escuela Universitaria Sant Pol de Mar</li>
+              <li>{lang === 'cat' ? 'Unió Europea' : 'Unión Europea'}</li>
+              <li>{lang === 'cat' ? 'Escola Universitària Sant Pol de Mar' : 'Escuela Universitaria Sant Pol de Mar'}</li>
               <li>FAGEM</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-clash font-semibold text-lg mb-4">Contacto</h4>
+            <h4 className="font-clash font-semibold text-lg mb-4">{lang === 'cat' ? 'Contacte' : 'Contacto'}</h4>
             <div className="font-poppins text-white/70 text-sm space-y-2">
               <p>info@emprenserveis.cat</p>
               <p>+34 93 123 45 67</p>
-              <p>Sant Pol de Mar, Catalunya</p>
+              <p>{lang === 'cat' ? 'Sant Pol de Mar, Catalunya' : 'Sant Pol de Mar, Cataluña'}</p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
           <p className="font-poppins text-white/60 text-sm">
-            © 2024 EMPRÈN SERVEIS. Todos los derechos reservados.
+            © 2025 EMPRÈN SERVEIS. {lang === 'cat' ? 'Tots els drets reservats.' : 'Todos los derechos reservados.'}
           </p>
         </div>
       </div>

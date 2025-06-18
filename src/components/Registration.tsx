@@ -1,9 +1,12 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock, Users, ArrowRight, Zap } from "lucide-react";
+import { useContext } from "react";
+import { LangContext } from "@/pages/Index";
 
-const Registration = () => {
+const Registration = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean) => void }) => {
+  const lang = useContext(LangContext);
+
   return (
     <section id="inscripcion" className="py-20 relative overflow-hidden" style={{ backgroundColor: '#F5F3F5' }}>
       {/* Background decorative elements */}
@@ -17,16 +20,18 @@ const Registration = () => {
           <div className="text-center mb-12 animate-on-scroll">
             <div className="inline-flex items-center gap-2 bg-empren-purple/10 text-empren-purple px-4 py-2 rounded-full text-sm font-medium mb-4 hover:bg-empren-purple/15 transition-all duration-300">
               <Zap className="w-4 h-4 animate-bounce" />
-              ¡Últimas plazas disponibles!
+              {lang === 'cat' ? 'Últimes places disponibles!' : '¡Últimas plazas disponibles!'}
             </div>
-            <h2 className="font-clash font-bold text-4xl md:text-5xl text-empren-text mb-6">
-              ¡Las inscripciones están <span className="text-empren-purple relative">
-                abiertas
+            <h2 className="font-clash font-bold text-4xl md:text-5xl text-empren-text mb-6" style={{ fontFamily: 'ClashDisplay, Poppins, Arial, sans-serif', fontWeight: 'bold' }}>
+              {lang === 'cat' ? 'Les inscripcions estan ' : '¡Las inscripciones están '}<span className="text-empren-purple relative">
+                {lang === 'cat' ? 'obertes' : 'abiertas'}
                 <div className="absolute -bottom-2 left-0 w-full h-3 bg-empren-purple/20 transform -skew-y-1"></div>
-              </span>!
+              </span>{lang === 'cat' ? '!' : '!'}
             </h2>
             <p className="font-poppins text-xl text-empren-text/70">
-              No pierdas la oportunidad de formar parte del ecosistema emprendedor más dinámico de Europa
+              {lang === 'cat'
+                ? "No perdis l'ancellationToken de formar part de l'ecosistema emprenedor més dinàmic d'Europa"
+                : 'No pierdas la oportunidad de formar parte del ecosistema emprendedor más dinámico de Europa'}
             </p>
           </div>
 
@@ -41,10 +46,10 @@ const Registration = () => {
                     <Calendar className="h-8 w-8 text-empren-purple group-hover/item:rotate-12 transition-transform duration-300" />
                   </div>
                   <h3 className="font-clash font-semibold text-lg text-empren-text mb-2 group-hover/item:text-empren-purple transition-colors duration-300">
-                    Fecha límite
+                    {lang === 'cat' ? 'Data límit' : 'Fecha límite'}
                   </h3>
                   <p className="font-poppins text-empren-text/70 font-bold text-lg group-hover/item:text-empren-purple transition-colors duration-300">
-                    21 de julio 2024
+                    21 {lang === 'cat' ? 'de juliol 2024' : 'de julio 2024'}
                   </p>
                 </div>
 
@@ -53,10 +58,10 @@ const Registration = () => {
                     <Clock className="h-8 w-8 text-empren-purple group-hover/item:rotate-12 transition-transform duration-300" />
                   </div>
                   <h3 className="font-clash font-semibold text-lg text-empren-text mb-2 group-hover/item:text-empren-purple transition-colors duration-300">
-                    Inicio programa
+                    {lang === 'cat' ? 'Inici programa' : 'Inicio programa'}
                   </h3>
                   <p className="font-poppins text-empren-text/70 font-bold text-lg group-hover/item:text-empren-purple transition-colors duration-300">
-                    9 de septiembre 2024
+                    9 {lang === 'cat' ? 'de setembre 2024' : 'de septiembre 2024'}
                   </p>
                 </div>
 
@@ -65,10 +70,10 @@ const Registration = () => {
                     <Users className="h-8 w-8 text-empren-purple group-hover/item:rotate-12 transition-transform duration-300" />
                   </div>
                   <h3 className="font-clash font-semibold text-lg text-empren-text mb-2 group-hover/item:text-empren-purple transition-colors duration-300">
-                    Plazas limitadas
+                    {lang === 'cat' ? 'Places limitades' : 'Plazas limitadas'}
                   </h3>
                   <p className="font-poppins text-empren-text/70 font-bold text-lg group-hover/item:text-empren-purple transition-colors duration-300">
-                    Selección rigurosa
+                    {lang === 'cat' ? 'Selecció rigorosa' : 'Selección rigurosa'}
                   </p>
                 </div>
               </div>
@@ -77,17 +82,14 @@ const Registration = () => {
                 <Button 
                   size="lg" 
                   className="bg-empren-purple hover:bg-empren-purple/90 text-white px-12 py-4 text-lg font-medium group/btn transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl"
+                  onClick={() => setOpen(true)}
                 >
-                  <span className="relative z-10">Inscríbete ahora</span>
+                  <span className="relative z-10">{lang === 'cat' ? 'Inscriu-te ara' : 'Inscríbete ahora'}</span>
                   <ArrowRight className="ml-2 h-5 w-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
                   
                   {/* Button shine effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-full group-hover/btn:translate-x-[-200%] transition-transform duration-700"></div>
                 </Button>
-                
-                <p className="font-poppins text-empren-text/60 text-sm mt-4 group-hover:text-empren-text/80 transition-colors duration-300">
-                  El proceso de selección incluye entrevista personal y evaluación del proyecto
-                </p>
               </div>
 
               {/* Decorative corner elements */}
@@ -97,85 +99,50 @@ const Registration = () => {
           </Card>
 
           {/* Sponsors Section */}
-          <div className="animate-on-scroll">
+          <div className="animate-on-scroll mt-12">
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="flex flex-col md:flex-row justify-center items-start gap-12">
                 {/* Financiado por */}
-                <div>
+                <div className="flex flex-col items-center">
                   <h3 className="font-clash font-semibold text-sm text-empren-text/60 mb-4 uppercase tracking-wide">
-                    FINANCIADO POR:
+                    {lang === 'cat' ? 'Finançat per:' : 'FINANCIADO POR:'}
                   </h3>
-                  <div className="flex items-center gap-6">
-                    {/* EU Logo */}
-                    <div className="flex items-center gap-3 group/sponsor">
-                      <div className="w-12 h-8 bg-blue-900 rounded flex items-center justify-center group-hover/sponsor:scale-105 transition-transform duration-300">
-                        <div className="grid grid-cols-3 gap-0.5">
-                          {[...Array(9)].map((_, i) => (
-                            <div key={i} className="w-1 h-1 bg-yellow-400 rounded-full"></div>
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <p className="font-poppins text-xs text-empren-text/70 leading-tight">
-                          Cofinanciado por<br />
-                          <span className="font-medium text-empren-text">la Unión Europea</span>
-                        </p>
-                      </div>
+                  <div className="flex flex-col items-center gap-4">
+                    <div className="flex items-center group/sponsor">
+                      <img 
+                        src="/lovable-uploads/Logo Color Union europea.png" 
+                        alt="Unión Europea Logo" 
+                        className="w-60 h-40 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="flex items-center group/sponsor">
+                      <img 
+                        src="/lovable-uploads/Logo Color Generalitat de Catalunya.png" 
+                        alt="Generalitat de Catalunya Logo" 
+                        className="w-60 h-40 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
+                      />
                     </div>
                   </div>
                 </div>
-
                 {/* Programa de */}
-                <div>
+                <div className="flex flex-col items-center">
                   <h3 className="font-clash font-semibold text-sm text-empren-text/60 mb-4 uppercase tracking-wide">
-                    PROGRAMA DE:
+                    {lang === 'cat' ? 'PROGRAMA DE:' : 'PROGRAMA DE:'}
                   </h3>
-                  <div className="flex items-center gap-6">
-                    {/* Generalitat Logo */}
-                    <div className="flex items-center gap-3 group/sponsor">
-                      <div className="w-12 h-8 bg-red-600 rounded flex items-center justify-center group-hover/sponsor:scale-105 transition-transform duration-300">
-                        <div className="grid grid-cols-2 gap-0.5">
-                          {[...Array(4)].map((_, i) => (
-                            <div key={i} className="w-1.5 h-4 bg-yellow-400"></div>
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <p className="font-poppins text-sm font-medium text-empren-text">
-                          Generalitat<br />
-                          de Catalunya
-                        </p>
-                      </div>
+                  <div className="flex flex-col items-center gap-4">
+                    <div className="flex items-center group/sponsor">
+                      <img 
+                        src="/lovable-uploads/Logo Escuela Universitaria color.png" 
+                        alt="EUHT Logo" 
+                        className="w-60 h-40 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
+                      />
                     </div>
-
-                    {/* University Logos */}
-                    <div className="flex items-center gap-3 group/sponsor">
-                      <div className="w-12 h-8 bg-purple-800 rounded flex items-center justify-center group-hover/sponsor:scale-105 transition-transform duration-300">
-                        <div className="text-white text-xs font-bold">EUHT</div>
-                      </div>
-                      <div>
-                        <p className="font-poppins text-xs text-empren-text/70 leading-tight">
-                          <span className="font-medium text-empren-text">ESCOLA UNIVERSITÀRIA</span><br />
-                          D'HOTELERIA I TURISME
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* FAGEM Logo */}
-                    <div className="flex items-center gap-3 group/sponsor">
-                      <div className="w-12 h-8 bg-gray-400 rounded flex items-center justify-center group-hover/sponsor:scale-105 transition-transform duration-300">
-                        <div className="grid grid-cols-3 gap-0.5">
-                          {[...Array(6)].map((_, i) => (
-                            <div key={i} className="w-1 h-1 bg-white rounded"></div>
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <p className="font-poppins text-xs text-empren-text/70 leading-tight">
-                          <span className="font-medium text-empren-text">FEDERACIÓ D'ASSOCIACIONS</span><br />
-                          I GREMIS EMPRESARIALS DEL MARESME
-                        </p>
-                      </div>
+                    <div className="flex items-center group/sponsor">
+                      <img 
+                        src="/lovable-uploads/Logo Fagem.png" 
+                        alt="FAGEM Logo" 
+                        className="w-60 h-40 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
+                      />
                     </div>
                   </div>
                 </div>
