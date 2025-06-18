@@ -30,7 +30,7 @@ const Registration = () => {
             </p>
           </div>
 
-          <Card className="hover-card bg-white border-0 shadow-2xl group">
+          <Card className="hover-card bg-white border-0 shadow-2xl group mb-12">
             <CardContent className="p-12 relative overflow-hidden">
               {/* Animated background */}
               <div className="absolute inset-0 bg-gradient-to-br from-empren-purple/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
@@ -95,6 +95,93 @@ const Registration = () => {
               <div className="absolute bottom-4 left-4 w-2 h-2 bg-empren-purple/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             </CardContent>
           </Card>
+
+          {/* Sponsors Section */}
+          <div className="animate-on-scroll">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Financiado por */}
+                <div>
+                  <h3 className="font-clash font-semibold text-sm text-empren-text/60 mb-4 uppercase tracking-wide">
+                    FINANCIADO POR:
+                  </h3>
+                  <div className="flex items-center gap-6">
+                    {/* EU Logo */}
+                    <div className="flex items-center gap-3 group/sponsor">
+                      <div className="w-12 h-8 bg-blue-900 rounded flex items-center justify-center group-hover/sponsor:scale-105 transition-transform duration-300">
+                        <div className="grid grid-cols-3 gap-0.5">
+                          {[...Array(9)].map((_, i) => (
+                            <div key={i} className="w-1 h-1 bg-yellow-400 rounded-full"></div>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <p className="font-poppins text-xs text-empren-text/70 leading-tight">
+                          Cofinanciado por<br />
+                          <span className="font-medium text-empren-text">la Unión Europea</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Programa de */}
+                <div>
+                  <h3 className="font-clash font-semibold text-sm text-empren-text/60 mb-4 uppercase tracking-wide">
+                    PROGRAMA DE:
+                  </h3>
+                  <div className="flex items-center gap-6">
+                    {/* Generalitat Logo */}
+                    <div className="flex items-center gap-3 group/sponsor">
+                      <div className="w-12 h-8 bg-red-600 rounded flex items-center justify-center group-hover/sponsor:scale-105 transition-transform duration-300">
+                        <div className="grid grid-cols-2 gap-0.5">
+                          {[...Array(4)].map((_, i) => (
+                            <div key={i} className="w-1.5 h-4 bg-yellow-400"></div>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <p className="font-poppins text-sm font-medium text-empren-text">
+                          Generalitat<br />
+                          de Catalunya
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* University Logos */}
+                    <div className="flex items-center gap-3 group/sponsor">
+                      <div className="w-12 h-8 bg-purple-800 rounded flex items-center justify-center group-hover/sponsor:scale-105 transition-transform duration-300">
+                        <div className="text-white text-xs font-bold">EUHT</div>
+                      </div>
+                      <div>
+                        <p className="font-poppins text-xs text-empren-text/70 leading-tight">
+                          <span className="font-medium text-empren-text">ESCOLA UNIVERSITÀRIA</span><br />
+                          D'HOTELERIA I TURISME
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* FAGEM Logo */}
+                    <div className="flex items-center gap-3 group/sponsor">
+                      <div className="w-12 h-8 bg-gray-400 rounded flex items-center justify-center group-hover/sponsor:scale-105 transition-transform duration-300">
+                        <div className="grid grid-cols-3 gap-0.5">
+                          {[...Array(6)].map((_, i) => (
+                            <div key={i} className="w-1 h-1 bg-white rounded"></div>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <p className="font-poppins text-xs text-empren-text/70 leading-tight">
+                          <span className="font-medium text-empren-text">FEDERACIÓ D'ASSOCIACIONS</span><br />
+                          I GREMIS EMPRESARIALS DEL MARESME
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
