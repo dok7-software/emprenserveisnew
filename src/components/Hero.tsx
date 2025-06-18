@@ -64,7 +64,7 @@ const Hero = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean) => vo
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-8">
+      <div className="relative z-10 container mx-auto px-4 py-8 pt-28 sm:pt-32 md:pt-36 lg:pt-40">
         <div className="max-w-4xl">
           <div className="mb-6 hero-badge">
             <span className="inline-flex items-center gap-2 bg-empren-purple/10 text-empren-purple px-6 py-3 rounded-full text-sm font-medium border border-empren-purple/20 hover:bg-empren-purple/15 transition-all duration-300 cursor-default">
