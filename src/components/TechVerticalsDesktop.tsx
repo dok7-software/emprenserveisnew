@@ -50,10 +50,7 @@ const TechVerticalsDesktop = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="font-clash font-bold text-4xl md:text-5xl text-empren-text mb-6" style={{ fontFamily: 'ClashDisplay, Poppins, Arial, sans-serif', fontWeight: 'bold' }}>
-            {lang === 'cat' ? 'Verticals Tecnològiques' : 'Verticales Tecnológicas'} <span className="text-empren-purple relative inline-block">
-              Tecnológicas
-              <div className="absolute -bottom-2 left-0 w-full h-2 bg-empren-purple/20 transform -skew-x-12"></div>
-            </span>
+            {lang === 'cat' ? 'Verticals ' : 'Verticales '}<span className="text-empren-purple">{lang === 'cat' ? 'Tecnològiques' : 'Tecnológicas'}</span>
           </h2>
           <p className="font-poppins text-xl text-empren-text/70 max-w-3xl mx-auto" style={{ fontFamily: 'Poppins, Arial, sans-serif', fontWeight: 'normal' }}>
             {lang === 'cat'

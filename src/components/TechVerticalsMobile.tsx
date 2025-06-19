@@ -50,9 +50,7 @@ const TechVerticalsMobile = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-on-scroll">
           <h2 className="font-clash font-bold text-3xl text-empren-text mb-4" style={{ fontFamily: 'ClashDisplay, Poppins, Arial, sans-serif', fontWeight: 'bold' }}>
-            {lang === 'cat' ? 'Verticals Tecnològiques' : 'Verticales Tecnológicas'} <span className="text-empren-purple relative block">
-              Tecnológicas
-            </span>
+            {lang === 'cat' ? 'Verticals ' : 'Verticales '}<span className="text-empren-purple">{lang === 'cat' ? 'Tecnològiques' : 'Tecnológicas'}</span>
           </h2>
           <p className="font-poppins text-lg text-empren-text/70 max-w-sm mx-auto" style={{ fontFamily: 'Poppins, Arial, sans-serif', fontWeight: 'normal' }}>
             {lang === 'cat'
