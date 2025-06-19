@@ -85,7 +85,7 @@ const HeroMobile = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean)
         {/* Description */}
         <p className="hero-description font-poppins text-lg text-empren-text/80 mb-6 max-w-sm">
           {lang === 'cat'
-            ? 'Agafa impuls i fes de la teva idea una实实在'
+            ? 'Agafa impuls i fes de la teva idea una realitat'
             : 'Coge impulso y haz de tu idea una realidad'}
         </p>
         
