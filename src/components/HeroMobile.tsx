@@ -52,16 +52,6 @@ const HeroMobile = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean)
       </div>
 
       {/* Mobile-optimized background */}
-      <div className="absolute inset-0 z-0">
-        <div className="relative w-full h-full">
-          <img 
-            src="/lovable-uploads/42de9cfc-3488-4f7f-be53-2f9d94cc1ee7.png" 
-            alt="Professional team" 
-            className="absolute right-0 top-0 h-full w-auto object-cover opacity-70"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-empren-bg via-empren-bg/80 to-empren-bg/60"></div>
-        </div>
-      </div>
 
       {/* Mobile Content - Reorganized for better UX */}
       <div className="relative z-10 flex flex-col items-center text-center pt-20 pb-8">
@@ -149,7 +139,7 @@ const HeroMobile = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean)
                   <img 
                     src="/lovable-uploads/Logo Color Generalitat de Catalunya.png" 
                     alt="Generalitat de Catalunya Logo" 
-                    className="w-36 h-24 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
+                    className="w-32 h-24 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -175,7 +165,7 @@ const HeroMobile = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean)
                   <img 
                     src="/lovable-uploads/Logo Fagem.png" 
                     alt="FAGEM Logo" 
-                    className="w-36 h-24 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
+                    className="w-40 h-28 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>

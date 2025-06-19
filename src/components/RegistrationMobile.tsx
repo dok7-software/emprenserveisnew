@@ -38,7 +38,7 @@ const RegistrationMobile = ({ open, setOpen }: { open: boolean; setOpen: (open: 
           <CardContent className="p-6 relative overflow-hidden">
             {/* Animated background */}
             <div className="absolute inset-0 bg-gradient-to-br from-empren-purple/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-            
+
             <div className="grid grid-cols-1 gap-6 mb-6 relative z-10">
               <div className="text-center group/item">
                 <div className="w-14 h-14 bg-empren-purple/10 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover/item:bg-empren-purple/20 group-hover/item:scale-110 transition-all duration-500">
@@ -78,14 +78,14 @@ const RegistrationMobile = ({ open, setOpen }: { open: boolean; setOpen: (open: 
             </div>
 
             <div className="text-center relative z-10">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="w-full bg-empren-purple hover:bg-empren-purple/90 text-white py-6 text-lg font-medium group/btn transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                 onClick={() => setOpen(true)}
               >
                 <span className="relative z-10">{lang === 'cat' ? 'Inscriu-te ara' : 'Inscríbete ahora'}</span>
                 <ArrowRight className="ml-2 h-5 w-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
-                
+
                 {/* Button shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-full group-hover/btn:translate-x-[-200%] transition-transform duration-700"></div>
               </Button>
@@ -104,17 +104,17 @@ const RegistrationMobile = ({ open, setOpen }: { open: boolean; setOpen: (open: 
                 </h3>
                 <div className="flex flex-wrap justify-center items-center gap-4">
                   <div className="flex items-center group/sponsor">
-                    <img 
-                      src="/lovable-uploads/Logo Color Union europea.png" 
-                      alt="Unión Europea Logo" 
-                      className="w-36 h-24 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
+                    <img
+                      src="/lovable-uploads/Logo Color Union europea.png"
+                      alt="Unión Europea Logo"
+                      className="w-40 h-28 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="flex items-center group/sponsor">
-                    <img 
-                      src="/lovable-uploads/Logo Color Generalitat de Catalunya.png" 
-                      alt="Generalitat de Catalunya Logo" 
-                      className="w-36 h-24 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
+                    <img
+                      src="/lovable-uploads/Logo Color Generalitat de Catalunya.png"
+                      alt="Generalitat de Catalunya Logo"
+                      className="w-32 h-24 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
                     />
                   </div>
                 </div>
@@ -127,21 +127,23 @@ const RegistrationMobile = ({ open, setOpen }: { open: boolean; setOpen: (open: 
                 </h3>
                 <div className="flex flex-wrap justify-center items-center gap-4">
                   <div className="flex items-center group/sponsor">
-                    <img 
-                      src="/lovable-uploads/Logo Escuela Universitaria color.png" 
-                      alt="EUHT Logo" 
-                      className="w-36 h-24 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
+                    <img
+                      src="/lovable-uploads/Logo Escuela Universitaria color.png"
+                      alt="EUHT Logo"
+                      className="w-40 h-24 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="flex items-center group/sponsor">
-                    <img 
-                      src="/lovable-uploads/Logo Fagem.png" 
-                      alt="FAGEM Logo" 
-                      className="w-36 h-24 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
+                    <img
+                      src="/lovable-uploads/Logo Fagem.png"
+                      alt="FAGEM Logo"
+                      className="w-40 h-24 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
                     />
                   </div>
                 </div>
               </div>
+
+
             </div>
           </div>
         </div>
