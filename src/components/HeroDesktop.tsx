@@ -136,7 +136,7 @@ const HeroDesktop = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean
                     <img 
                       src="/lovable-uploads/Logo Color Union europea.png" 
                       alt="Unión Europea Logo" 
-                      className="w-72 h-48 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
+                      className="w-72 h-28 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
                     />
                   </div>
 
@@ -145,7 +145,7 @@ const HeroDesktop = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean
                     <img 
                       src="/lovable-uploads/Logo Color Generalitat de Catalunya.png" 
                       alt="Generalitat de Catalunya Logo" 
-                      className="w-72 h-48 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
+                      className="w-72 h-28 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
                     />
                   </div>
                 </div>
