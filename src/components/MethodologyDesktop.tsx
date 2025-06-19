@@ -49,7 +49,7 @@ const MethodologyDesktop = () => {
   ];
 
   return (
-    <section id="programa" className="py-20 bg-white">
+    <section id="metodologia" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="font-clash font-bold text-4xl md:text-5xl text-empren-text mb-6" style={{ fontFamily: 'ClashDisplay, Poppins, Arial, sans-serif', fontWeight: 'bold' }}>
@@ -71,11 +71,12 @@ const MethodologyDesktop = () => {
           {phases.map((phase, index) => (
             <div key={index} className="relative animate-on-scroll">
               <Card className="hover-card h-full border-2 border-gray-200 hover:border-empren-purple/30 group overflow-hidden">
-                <CardContent className="p-8 flex flex-col h-full justify-between relative">
+                <CardContent className="p-8 flex flex-col h-full relative">
                   {/* Background gradient effect */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${phase.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                   
-                  <div className="mb-6 relative z-10">
+                  {/* Icon container with fixed height */}
+                  <div className="h-24 relative z-10">
                     <div className="relative">
                       <span className="absolute -top-6 -right-6 bg-empren-purple text-white font-bold text-lg px-4 py-2 rounded-full group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
                         {phase.step}
@@ -86,19 +87,22 @@ const MethodologyDesktop = () => {
                     </div>
                   </div>
                   
-                  <h3 className="font-clash font-semibold text-lg text-empren-text mb-2 group-hover:text-empren-purple transition-colors duration-300">
-                    {phase.title}
-                  </h3>
-                  
-                  <div className="mb-4">
-                    <span className={`inline-block bg-gradient-to-r ${phase.color} text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg group-hover:scale-105 transition-transform duration-300`}>
-                      {phase.subtitle}
-                    </span>
+                  {/* Content container */}
+                  <div className="flex flex-col flex-grow">
+                    <h3 className="font-clash font-semibold text-lg text-empren-text h-14 mb-4 group-hover:text-empren-purple transition-colors duration-300">
+                      {phase.title}
+                    </h3>
+                    
+                    <div className="mb-4">
+                      <span className={`inline-block bg-gradient-to-r ${phase.color} text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg group-hover:scale-105 transition-transform duration-300`}>
+                        {phase.subtitle}
+                      </span>
+                    </div>
+                    
+                    <p className="font-poppins text-empren-text/70 text-sm leading-relaxed group-hover:text-empren-text/90 transition-colors duration-300">
+                      {phase.description}
+                    </p>
                   </div>
-                  
-                  <p className="font-poppins text-empren-text/70 text-sm leading-relaxed group-hover:text-empren-text/90 transition-colors duration-300">
-                    {phase.description}
-                  </p>
 
                   {/* Progress indicator */}
                   <div className="w-full h-1 bg-gray-200 mt-6">

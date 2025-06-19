@@ -20,14 +20,14 @@ const HeaderDesktop = ({ onOpenInscripcion }: { onOpenInscripcion: () => void })
         </h1>
         
         <nav className="hidden md:flex space-x-6">
-          <button onClick={() => scrollToSection('programa')} className="text-empren-text hover:text-empren-purple transition-colors">
-            {lang === 'cat' ? 'Programa' : 'Programa'}
-          </button>
           <button onClick={() => scrollToSection('beneficios')} className="text-empren-text hover:text-empren-purple transition-colors">
             {lang === 'cat' ? 'Beneficis' : 'Beneficios'}
           </button>
           <button onClick={() => scrollToSection('verticales')} className="text-empren-text hover:text-empren-purple transition-colors">
             {lang === 'cat' ? 'Verticals' : 'Verticales'}
+          </button>
+          <button onClick={() => scrollToSection('metodologia')} className="text-empren-text hover:text-empren-purple transition-colors">
+            {lang === 'cat' ? 'Metodologia' : 'Metodología'}
           </button>
           <button onClick={() => scrollToSection('contacto')} className="text-empren-text hover:text-empren-purple transition-colors">
             {lang === 'cat' ? 'Contacte' : 'Contacto'}

@@ -69,7 +69,7 @@ const HeroDesktop = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean
           <div className="mb-6 hero-badge">
             <span className="inline-flex items-center gap-2 bg-empren-purple/10 text-empren-purple px-6 py-3 rounded-full text-sm font-medium border border-empren-purple/20 hover:bg-empren-purple/15 transition-all duration-300 cursor-default">
               <Sparkles className="w-4 h-4 animate-pulse" />
-              Programa de Preaceleración 2025
+              {lang === 'cat' ? 'Programa de Preacceleració 2025' : 'Programa de Preaceleración 2025'}
             </span>
           </div>
           
@@ -83,7 +83,7 @@ const HeroDesktop = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean
           
           <p className="hero-description font-poppins text-xl md:text-2xl text-empren-text/80 mb-8 max-w-3xl">
             {lang === 'cat'
-              ? 'Agafa impuls i fes de la teva idea una realitat'
+              ? 'Agafa impuls i fes de la teva idea una实实在'
               : 'Agarra impulso y haz de tu idea una realidad'}
           </p>
           
@@ -93,7 +93,7 @@ const HeroDesktop = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean
               className="bg-empren-purple hover:bg-empren-purple/90 text-white px-8 py-4 text-lg font-medium group transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl"
               onClick={() => setOpen(true)}
             >
-              Inscríbete ahora
+              {lang === 'cat' ? 'Inscriu-te ara' : 'Inscríbete ahora'}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
             </Button>
             
@@ -103,18 +103,22 @@ const HeroDesktop = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean
               className="border-2 border-empren-purple text-empren-purple hover:bg-empren-purple hover:text-white px-8 py-4 text-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl"
               onClick={scrollToBenefits}
             >
-              Conoce más
+              {lang === 'cat' ? 'Coneix més' : 'Conoce más'}
             </Button>
           </div>
 
           <div className="hero-info flex flex-col sm:flex-row gap-6 text-empren-text/70 mb-8">
             <div className="flex items-center gap-2 group cursor-default">
               <Calendar className="h-5 w-5 text-empren-purple group-hover:scale-110 transition-transform duration-300" />
-              <span className="font-poppins group-hover:text-empren-text transition-colors duration-300">Inscripciones hasta 21 julio</span>
+              <span className="font-poppins group-hover:text-empren-text transition-colors duration-300">
+                {lang === 'cat' ? 'Inscripcions fins 21 juliol' : 'Inscripciones hasta 21 julio'}
+              </span>
             </div>
             <div className="flex items-center gap-2 group cursor-default">
               <Users className="h-5 w-5 text-empren-purple group-hover:scale-110 transition-transform duration-300" />
-              <span className="font-poppins group-hover:text-empren-text transition-colors duration-300">Inicio: 9 septiembre</span>
+              <span className="font-poppins group-hover:text-empren-text transition-colors duration-300">
+                {lang === 'cat' ? 'Inici: 9 setembre' : 'Inicio: 9 septiembre'}
+              </span>
             </div>
           </div>
 
@@ -124,9 +128,9 @@ const HeroDesktop = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean
               {/* Financiado por */}
               <div className="animate-on-scroll">
                 <h3 className="font-clash font-semibold text-xs text-empren-text/60 mb-1 uppercase tracking-wide">
-                  FINANCIADO POR:
+                  {lang === 'cat' ? 'FINANÇAT PER:' : 'FINANCIADO POR:'}
                 </h3>
-                <div className="flex flex-wrap items-center gap-4">
+                <div className="flex flex-wrap items-center gap-4 mt-4">
                   {/* EU Logo */}
                   <div className="flex items-center group/sponsor">
                     <img 
@@ -150,15 +154,15 @@ const HeroDesktop = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean
               {/* Programa de */}
               <div className="animate-on-scroll">
                 <h3 className="font-clash font-semibold text-xs text-empren-text/60 mb-1 uppercase tracking-wide">
-                  PROGRAMA DE:
+                  {lang === 'cat' ? 'PROGRAMA DE:' : 'PROGRAMA DE:'}
                 </h3>
-                <div className="flex flex-wrap items-center gap-4">
+                <div className="flex flex-wrap items-center gap-4 mt-4">
                   {/* University Logo */}
                   <div className="flex items-center group/sponsor">
                     <img 
                       src="/lovable-uploads/Logo Escuela Universitaria color.png" 
                       alt="EUHT Logo" 
-                      className="w-72 h-48 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
+                      className="w-72 h-28 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
                     />
                   </div>
 
@@ -167,7 +171,7 @@ const HeroDesktop = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean
                     <img 
                       src="/lovable-uploads/Logo Fagem.png" 
                       alt="FAGEM Logo" 
-                      className="w-72 h-48 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
+                      className="w-72 h-28  object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
                     />
                   </div>
                 </div>

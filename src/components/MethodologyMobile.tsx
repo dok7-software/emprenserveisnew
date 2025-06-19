@@ -49,7 +49,7 @@ const MethodologyMobile = () => {
   ];
 
   return (
-    <section id="programa" className="py-12 bg-white">
+    <section id="metodologia" className="py-12 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-on-scroll">
           <h2 className="font-clash font-bold text-3xl text-empren-text mb-4" style={{ fontFamily: 'ClashDisplay, Poppins, Arial, sans-serif', fontWeight: 'bold' }}>

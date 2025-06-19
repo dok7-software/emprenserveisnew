@@ -69,7 +69,7 @@ const HeroMobile = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean)
         <div className="mb-4 hero-badge">
           <span className="inline-flex items-center gap-2 bg-empren-purple/10 text-empren-purple px-4 py-2 rounded-full text-xs font-medium border border-empren-purple/20">
             <Sparkles className="w-3 h-3 animate-pulse" />
-            Programa de Preaceleración 2025
+            {lang === 'cat' ? 'Programa de Preacceleració 2025' : 'Programa de Preaceleración 2025'}
           </span>
         </div>
         
@@ -85,7 +85,7 @@ const HeroMobile = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean)
         {/* Description */}
         <p className="hero-description font-poppins text-lg text-empren-text/80 mb-6 max-w-sm">
           {lang === 'cat'
-            ? 'Agafa impuls i fes de la teva idea una realitat'
+            ? 'Agafa impuls i fes de la teva idea una实实在'
             : 'Coge impulso y haz de tu idea una realidad'}
         </p>
         
@@ -96,7 +96,7 @@ const HeroMobile = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean)
             className="bg-empren-purple hover:bg-empren-purple/90 text-white px-6 py-3 text-base font-medium group transform hover:scale-105 transition-all duration-300 shadow-lg"
             onClick={() => setOpen(true)}
           >
-            Inscríbete ahora
+            {lang === 'cat' ? 'Inscriu-te ara' : 'Inscríbete ahora'}
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
           
@@ -106,7 +106,7 @@ const HeroMobile = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean)
             className="border-2 border-empren-purple text-empren-purple hover:bg-empren-purple hover:text-white px-6 py-3 text-base transform hover:scale-105 transition-all duration-300 shadow-lg"
             onClick={scrollToBenefits}
           >
-            Conoce más
+            {lang === 'cat' ? 'Coneix més' : 'Conoce más'}
           </Button>
         </div>
 
@@ -114,11 +114,15 @@ const HeroMobile = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean)
         <div className="hero-info flex flex-col gap-3 text-empren-text/70 mb-8 text-sm">
           <div className="flex items-center justify-center gap-2 group">
             <Calendar className="h-4 w-4 text-empren-purple" />
-            <span className="font-poppins">Inscripciones hasta 21 julio</span>
+            <span className="font-poppins">
+              {lang === 'cat' ? 'Inscripcions fins 21 juliol' : 'Inscripciones hasta 21 julio'}
+            </span>
           </div>
           <div className="flex items-center justify-center gap-2 group">
             <Users className="h-4 w-4 text-empren-purple" />
-            <span className="font-poppins">Inicio: 9 septiembre</span>
+            <span className="font-poppins">
+              {lang === 'cat' ? 'Inici: 9 setembre' : 'Inicio: 9 septiembre'}
+            </span>
           </div>
         </div>
 
@@ -128,24 +132,24 @@ const HeroMobile = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean)
             {/* Financiado por */}
             <div className="animate-on-scroll">
               <h3 className="font-clash font-semibold text-xs text-empren-text/60 mb-4 uppercase tracking-wide text-center">
-                FINANCIADO POR:
+                {lang === 'cat' ? 'FINANÇAT PER:' : 'FINANCIADO POR:'}
               </h3>
-              <div className="grid grid-cols-2 gap-4 items-center">
+              <div className="flex flex-wrap justify-center items-center gap-4">
                 {/* EU Logo */}
-                <div className="flex items-center justify-center">
+                <div className="flex items-center group/sponsor">
                   <img 
                     src="/lovable-uploads/Logo Color Union europea.png" 
                     alt="Unión Europea Logo" 
-                    className="w-38 h-29 object-contain"
+                    className="w-36 h-24 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
                   />
                 </div>
 
                 {/* Generalitat Logo */}
-                <div className="flex items-center justify-center">
+                <div className="flex items-center group/sponsor">
                   <img 
                     src="/lovable-uploads/Logo Color Generalitat de Catalunya.png" 
                     alt="Generalitat de Catalunya Logo" 
-                    className="w-38 h-29 object-contain"
+                    className="w-36 h-24 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -154,24 +158,24 @@ const HeroMobile = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean)
             {/* Programa de */}
             <div className="animate-on-scroll">
               <h3 className="font-clash font-semibold text-xs text-empren-text/60 mb-4 uppercase tracking-wide text-center">
-                PROGRAMA DE:
+                {lang === 'cat' ? 'PROGRAMA DE:' : 'PROGRAMA DE:'}
               </h3>
-              <div className="grid grid-cols-2 gap-4 items-center">
+              <div className="flex flex-wrap justify-center items-center gap-4">
                 {/* University Logo */}
-                <div className="flex items-center justify-center">
+                <div className="flex items-center group/sponsor">
                   <img 
                     src="/lovable-uploads/Logo Escuela Universitaria color.png" 
                     alt="EUHT Logo" 
-                    className="w-38 h-29 object-contain"
+                    className="w-36 h-24 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
                   />
                 </div>
 
                 {/* FAGEM Logo */}
-                <div className="flex items-center justify-center">
+                <div className="flex items-center group/sponsor">
                   <img 
                     src="/lovable-uploads/Logo Fagem.png" 
                     alt="FAGEM Logo" 
-                    className="w-38 h-29 object-contain"
+                    className="w-36 h-24 object-contain group-hover/sponsor:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
