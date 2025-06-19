@@ -84,7 +84,7 @@ const HeroDesktop = ({ open, setOpen }: { open: boolean; setOpen: (open: boolean
           <p className="hero-description font-poppins text-xl md:text-2xl text-empren-text/80 mb-8 max-w-3xl">
             {lang === 'cat'
               ? 'Agafa impuls i fes de la teva idea una realitat'
-              : 'Agafa impuls y haz de tu idea una realidad'}
+              : 'Agarra impulso y haz de tu idea una realidad'}
           </p>
           
           <div className="hero-buttons flex flex-col sm:flex-row gap-4 mb-8">
